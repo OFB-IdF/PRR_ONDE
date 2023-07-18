@@ -42,7 +42,29 @@ jobs:
       - uses: r-lib/actions/setup-r-dependencies@v2
         with:
           packages: |
+            any::attachment
+            any::data.table
             any::devtools
+            any::dplyr
+            any::ggplot2
+            any::ggrepel
+            any::glue
+            any::htmltools
+            any::import
+            any::knitr
+            any::leafem
+            any::leaflet
+            any::leafpop
+            any::lubridate
+            any::mapview
+            any::png
+            any::purrr
+            any::rmarkdown
+            any::scales
+            any::sf
+            any::stringr
+            any::tidyr
+            any::webp
       
       - uses: r-lib/actions/setup-pandoc@v2
         with:
@@ -50,7 +72,9 @@ jobs:
       
       - name: Installation dependencies
         run: | 
-          Rscript "00_installation_packages.R"
+          pak::pkg_install("richaben/ondetools")
+          pak::pkg_install("inrae/hubeau")
+        shell: Rscript {0}
         
       - name: Verifier maj
         run: |
