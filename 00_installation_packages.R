@@ -1,5 +1,17 @@
 ## Dépendances 
 
-devtools::install_github("richaben/ondetools")
-devtools::install_github("OFB-IdF/hubeau")
-install.packages(c("tidyverse", "purrr", "sf", "mapview", "leaflet", "leaflet.extras", "ggrepel", "glue", "forcats", "scales", "data.table", "import", "lubridate", "stringr", "tidyr", "ggplot2", "knitr", "rmarkdown", "htmltools"))
+# Liste des packages utilisés dans les scripts, à renseigner dans
+# r-lib/actions/setup-r-dependencies@v2
+# sort(
+#        unique(
+#            c(
+#                unlist(
+#                    purrr::map(
+#                        list.files(pattern = ".R$"), 
+#                        attachment::att_from_rscript
+#                      )
+#                  ),
+#                attachment::att_from_rmd("assets/template.Rmd")
+#              )
+#          )
+#        )
