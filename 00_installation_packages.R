@@ -1,17 +1,5 @@
 ## Dépendances 
 
-# Liste des packages utilisés dans les scripts, à renseigner dans
-# r-lib/actions/setup-r-dependencies@v2
-# sort(
-#        unique(
-#            c(
-#                unlist(
-#                    purrr::map(
-#                        list.files(pattern = ".R$"), 
-#                        attachment::att_from_rscript
-#                      )
-#                  ),
-#                attachment::att_from_rmd("assets/template.Rmd")
-#              )
-#          )
-#        )
+devtools::install_github("richaben/ondetools")
+devtools::install_github("inrae/hubeau")
+install.packages(c("tidyverse", "purrr", "sf", "mapview", "leaflet", "leaflet.extras", "ggrepel", "glue", "forcats", "scales", "data.table", "lubridate", "stringr", "tidyr", "ggplot2", "knitr", "rmarkdown", "htmltools", "leafem", "png", "webp"))
