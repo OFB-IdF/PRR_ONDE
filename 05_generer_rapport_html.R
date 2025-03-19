@@ -17,3 +17,12 @@ rmarkdown::render("assets/template.Rmd",
                     set_title = conf_titre
                   ),
                   quiet = TRUE)
+
+readLines("index.html") %>%
+  stringr::str_replace(
+    pattern = "</title>",
+    replacement = '</title>
+    
+<script data-goatcounter="https://ofb-idf.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>'
+  ) %>%
+  writeLines("index.html")
